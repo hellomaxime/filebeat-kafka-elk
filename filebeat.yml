@@ -1,0 +1,8 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - "/tmp/logs/*.log"
+    
+output.kafka:
+ hosts: ["localhost:9092"]
+ topic: 'filebeat'
